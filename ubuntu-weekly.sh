@@ -18,4 +18,4 @@ export XAUTHORITY=/home/h/.Xauthority                # <<<<<<<<<<<<< CHANGE USER
 #---------------------------------------------
 
 
-/home/h/Scripts/virtualbox/ubuntu-backup.sh "weekly"
+gnome-terminal --tab --command='/home/h/Scripts/virtualbox/ubuntu-backup.sh "weekly"'
