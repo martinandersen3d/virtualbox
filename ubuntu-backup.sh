@@ -5,6 +5,9 @@
 
 VM_NAME="VM_Ubuntu"
 
+# Remove oldest image
+rm "/home/h/VM/Exports/VM_Ubuntu_$1_2.ova"
+
 # Send Shutdown signal - os will shutdown nicely
 VBoxManage controlvm VM_Ubuntu acpipowerbutton
 
@@ -23,9 +26,10 @@ done
 
 echo "Continue script..."
 
-mv /home/h/VM/Exports/VM_Ubuntu.ova /home/h/VM/Exports/VM_Ubuntu.ova
 
-VBoxManage export VM_Ubuntu -o /home/h/VM/Exports/VM_Ubuntu_1.ova
+mv "/home/h/VM/Exports/VM_Ubuntu_$1_1.ova" "/home/h/VM/Exports/VM_Ubuntu_$1_2.ova"
+
+VBoxManage export VM_Ubuntu -o "/home/h/VM/Exports/VM_Ubuntu_$1_1.ova"
 
 sleep 10
 
